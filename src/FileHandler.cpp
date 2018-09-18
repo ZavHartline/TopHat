@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
     /* Some object declares */
-    ifstream fileStream("source.jug");  /* Using arbitrary source.jug for now */
+    ifstream fileStream("./source.jug");  /* Using arbitrary source.jug for now */
     string readLine("");
     string processedLine("");
     vector<string> fileContents;
