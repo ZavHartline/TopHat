@@ -1,7 +1,7 @@
 FLAGS=-Wall -std=c++98 -pedantic
-DEPS=FileHandler.hpp
+DEPS=FileHandler.hpp LexicalAnalyzer.hpp
 %.o: %.c $(DEPS)
 	g++ -c -o $@ $< $(FLAGS)
 
-FileHandler: FileHandler.o
-	g++ -o ../bin/FileHandler FileHandler.o 
+FileHandler: FileHandler.o LexicalAnalyzer.o
+	g++ -o ../bin/FileHandler FileHandler.o LexicalAnalyzer.o

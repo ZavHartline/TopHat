@@ -2,9 +2,10 @@
 
 using namespace std;
 
-int main() {
+int loadFile(string filepath) {
+
     /* Some object declares */
-    ifstream fileStream("./source.jug");  /* Using arbitrary source.jug for now */
+    ifstream fileStream(filepath);  /* Using arbitrary source.jug for now */
     string readLine("");
     string processedLine("");
     vector<string> fileContents;
@@ -32,4 +33,13 @@ int main() {
     for(vector<string>::iterator it = fileContents.begin(); it != fileContents.end(); it++) {
         cout << *it << endl;
     }
+
+    return 0;
+}
+
+
+int main() {
+    loadFile("./source.jug");
+    LexicalAnalyzer::tokenize();
+    return 0;
 }

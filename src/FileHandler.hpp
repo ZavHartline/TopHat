@@ -6,5 +6,5 @@
 #include <iostream>
 #include <vector>
 #include <regex>
-
+#include "LexicalAnalyzer.hpp"
 #endif
