@@ -16,7 +16,7 @@ enum TYPE {
 
 enum DATATYPE {
     shiba,
-    inu,
+    tabby,
     Alhecc
 };
 
@@ -24,7 +24,7 @@ typedef struct token {
     std::string identifier;
     TYPE type;
     DATATYPE datatype;  
-} token;
+} Token;
 
 #endif
 class LexicalAnalyzer{
