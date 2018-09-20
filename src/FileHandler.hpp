@@ -7,4 +7,5 @@
 #include <vector>
 #include <regex>
 #include "LexicalAnalyzer.hpp"
+#include "ErrorHandler.hpp"
 #endif

@@ -24,8 +24,7 @@ int loadFile(string filepath) {
         fileStream.close();
     }
     else {
-        cout << "File could not be opened.\n";
-        return 1; //Pro error codes
+        ErrorHandler::report("Could not access file (" + filepath + ")", file_in, fatal);
     }
     cout << "\n\nFull file as string:\n\n";
    

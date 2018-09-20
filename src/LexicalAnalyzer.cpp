@@ -1,5 +1,5 @@
 #include "LexicalAnalyzer.hpp"
-
+#include "ErrorHandler.hpp"
 using namespace std;
 /**This method is designed to split all lines from the input text file into tokens
  * 
@@ -29,6 +29,10 @@ int LexicalAnalyzer::tokenize(){
     };
 
     cout << "Printing all stored data:\n";
+
+    //Throw an error for testing
+    ErrorHandler::report("Heck you", lexan, fatal);
+
     return 0;
 }
 
