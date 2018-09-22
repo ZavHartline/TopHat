@@ -8,26 +8,28 @@
 
 /* A temperory enumerator */
 /* TODO: Fill in serious values */
-enum TYPE { 
-    doggo,
-    kitty,
-    kamehameha
-};
 
-enum DATATYPE {
-    shiba,
-    tabby,
-    Alhecc
+enum TYPE {
+    identifier,
+    native_operator,
+    integer_literal,
+    float_literal,
+    string_literal,
+    std_out,
+    std_in,
+    native_type,
 };
 
 typedef struct token {
     std::string identifier;
     TYPE type;
-    DATATYPE datatype;  
 } Token;
 
-#endif
+
+
 class LexicalAnalyzer{
     public:
-         static int tokenize();
+        static int tokenize(std::vector<std::string>);
 };
+
+#endif

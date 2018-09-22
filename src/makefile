@@ -1,6 +1,6 @@
-FLAGS=-Wall -std=c++98 -pedantic
+FLAGS=-Wall 
 DEPS=FileHandler.hpp LexicalAnalyzer.hpp ErrorHandler.hpp
-%.o: %.c $(DEPS)
+%.o: %.cpp $(DEPS)
 	g++ -c -o $@ $< $(FLAGS)
 
 FileHandler: FileHandler.o LexicalAnalyzer.o ErrorHandler.o

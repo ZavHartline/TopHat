@@ -36,9 +36,24 @@ int loadFile(string filepath) {
     return 0;
 }
 
+int regexTest(){
+    regex test("(int)|(0\\.0+)");
+    
+    cout << regex_match("hjfqbjhkwvkjqwe0.00000bfeqhjkqvwfjh", test) << endl;
 
-int main() {
-    loadFile("./source.jug");
-    LexicalAnalyzer::tokenize();
     return 0;
 }
+
+
+
+
+int main() {
+    //loadFile("./source.jug");
+    //LexicalAnalyzer::tokenize();
+    regexTest();
+    return 0;
+}
+
+
+
+
