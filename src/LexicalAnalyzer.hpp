@@ -2,6 +2,7 @@
 #define LEXICALANALYZER_H
 
 #include <iostream>
+#include <iterator>
 #include <string>
 #include <vector>
 //#include "FileHandler.hpp"

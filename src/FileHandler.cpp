@@ -37,9 +37,23 @@ int loadFile(string filepath) {
 }
 
 int regexTest(){
-    regex test("(int)|(0\\.0+)");
+    string input("int 5.0 float");
+    regex test("(int)|(float)|(\\d*\\.\\d+)");
+    sregex_iterator begin = sregex_iterator(input.begin(), input.end(), test);
+    sregex_iterator end = sregex_iterator();
+
+    cout << "Found " << distance(begin, end) << " matches found" << endl;
     
-    cout << regex_match("hjfqbjhkwvkjqwe0.00000bfeqhjkqvwfjh", test) << endl;
+    for(sregex_iterator i = begin; i != end; i++) {
+        smatch matchedWord = *i;
+        cout <<": " <<  matchedWord.str() << endl;
+        for(size_t j = 1; j < matchedWord.size(); ++j){
+            if(!matchedWord.str(j).empty()){
+                cout << j  << endl;
+                break;
+            }
+        }
+    }
 
     return 0;
 }
